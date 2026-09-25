@@ -72,7 +72,8 @@ jobs:
         with:
           ruby-version: '3.3'
       - run: for dir in packages/rubygems/*; do (cd "$dir" && ruby -Ilib test/test.rb && gem build ./*.gemspec); done
-      - run: mkdir -p "$HOME/.gem" && printf ':github: Bearer %s\n' "$GITHUB_TOKEN" > "$HOME/.gem/credentials" && chmod 600 "$HOME/.gem/credentials"
+      - run: |
+          mkdir -p "$HOME/.gem" && printf ':github: Bearer %s\n' "$GITHUB_TOKEN" > "$HOME/.gem/credentials" && chmod 600 "$HOME/.gem/credentials"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: for archive in packages/rubygems/*/*.gem; do gem push --key github --host https://rubygems.pkg.github.com/x-mori "$archive"; done

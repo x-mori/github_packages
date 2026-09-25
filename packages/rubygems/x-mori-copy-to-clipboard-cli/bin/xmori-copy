@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'fujiblaze/copy_to_clipboard_cli'
+FujiBlaze::CopyToClipboardCli.copy($stdin.read)

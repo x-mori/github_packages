@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name = 'x-mori-port-check'
   spec.version = '1.0.0'
   spec.summary = 'Check and find available local TCP ports.'
-  spec.description = spec.summary
+  spec.description = spec.summary + ' This gem targets Ruby 3.1 or newer and has no runtime dependencies.'
   spec.authors = ['x-mori']
   spec.homepage = 'https://github.com/x-mori/github_packages'
   spec.license = 'MIT'

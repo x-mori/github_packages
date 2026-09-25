@@ -1,7 +1,9 @@
 node_modules/
 target/
-bin/
-obj/
+packages/nuget/*/bin/
+packages/nuget/*/obj/
+tests/nuget-smoke/bin/
+tests/nuget-smoke/obj/
 *.gem
 *.nupkg
 *.snupkg
