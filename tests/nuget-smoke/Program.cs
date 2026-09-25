@@ -47,7 +47,7 @@ using (var queue = new XMori.AsyncQueueLite.AsyncQueue(1))
 int calls = 0;
 var memo = new XMori.MemoizeAsync.AsyncMemoizer<int, int>(x => Task.FromResult(x + ++calls), TimeSpan.FromMinutes(1));
 Check(await memo.GetAsync(1) == await memo.GetAsync(1) && calls == 1, "memoizer");
-Console.WriteLine("All nine NuGet package smoke tests passed.");
+Console.WriteLine("NuGet package smoke tests passed.");
 
 sealed record Payload(int Value);
 sealed class StubHandler(Func<int, HttpResponseMessage> respond) : HttpMessageHandler

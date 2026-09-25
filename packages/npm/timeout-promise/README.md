@@ -1,9 +1,9 @@
-# @x_mori/timeout-promise
+# @x-mori/timeout-promise
 
 Set a deadline for a promise result.
 
 ```js
-import { timeoutPromise } from '@x_mori/timeout-promise';
+import { timeoutPromise } from '@x-mori/timeout-promise';
 const value = await timeoutPromise(fetch('https://example.com'), 2000);
 ```
 

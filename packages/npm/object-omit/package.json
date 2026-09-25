@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/object-omit",
+  "name": "@x-mori/object-omit",
   "version": "1.0.0",
   "description": "Copy an object without selected own properties.",
   "type": "module",

@@ -1,9 +1,9 @@
-# @x_mori/safe-get
+# @x-mori/safe-get
 
 Read a nested own property with a fallback.
 
 ```js
-import { safeGet } from '@x_mori/safe-get';
+import { safeGet } from '@x-mori/safe-get';
 const port = safeGet({ db: { port: 5432 } }, 'db.port', 3000);
 ```
 

@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/timeout-promise",
+  "name": "@x-mori/timeout-promise",
   "version": "1.0.0",
   "description": "Set a deadline for a promise result.",
   "type": "module",

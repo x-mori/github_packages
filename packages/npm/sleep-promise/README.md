@@ -1,9 +1,9 @@
-# @x_mori/sleep-promise
+# @x-mori/sleep-promise
 
 Wait for a duration with optional abort support.
 
 ```js
-import { sleepPromise } from '@x_mori/sleep-promise';
+import { sleepPromise } from '@x-mori/sleep-promise';
 await sleepPromise(250);
 ```
 

@@ -1,9 +1,9 @@
-# @x_mori/deep-freeze
+# @x-mori/deep-freeze
 
 Freeze nested arrays and plain objects, including cycles.
 
 ```js
-import { deepFreeze } from '@x_mori/deep-freeze';
+import { deepFreeze } from '@x-mori/deep-freeze';
 const config = deepFreeze({ nested: { enabled: true } });
 ```
 

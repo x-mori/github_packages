@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/array-unique-by",
+  "name": "@x-mori/array-unique-by",
   "version": "1.0.0",
   "description": "Keep the first item for each selected key.",
   "type": "module",

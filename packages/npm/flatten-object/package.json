@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/flatten-object",
+  "name": "@x-mori/flatten-object",
   "version": "1.0.0",
   "description": "Flatten nested plain objects into dot paths.",
   "type": "module",

@@ -1,9 +1,9 @@
-# @x_mori/retry-async
+# @x-mori/retry-async
 
 Retry an asynchronous operation with bounded backoff.
 
 ```js
-import { retryAsync } from '@x_mori/retry-async';
+import { retryAsync } from '@x-mori/retry-async';
 const value = await retryAsync(() => fetch('https://example.com'), { attempts: 3, delay: 100 });
 ```
 

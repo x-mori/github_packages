@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/deep-merge-lite",
+  "name": "@x-mori/deep-merge-lite",
   "version": "1.0.0",
   "description": "Merge plain objects without mutating inputs.",
   "type": "module",

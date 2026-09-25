@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/retry-async",
+  "name": "@x-mori/retry-async",
   "version": "1.0.0",
   "description": "Retry an asynchronous operation with bounded backoff.",
   "type": "module",

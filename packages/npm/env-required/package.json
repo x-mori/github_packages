@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/env-required",
+  "name": "@x-mori/env-required",
   "version": "1.0.0",
   "description": "Require named environment variables with useful errors.",
   "type": "module",

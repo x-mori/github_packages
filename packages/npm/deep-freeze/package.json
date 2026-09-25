@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/deep-freeze",
+  "name": "@x-mori/deep-freeze",
   "version": "1.0.0",
   "description": "Freeze nested arrays and plain objects, including cycles.",
   "type": "module",

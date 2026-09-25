@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/group-by-key",
+  "name": "@x-mori/group-by-key",
   "version": "1.0.0",
   "description": "Group items by a property or callback.",
   "type": "module",

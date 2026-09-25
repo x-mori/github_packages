@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/string-truncate-smart",
+  "name": "@x-mori/string-truncate-smart",
   "version": "1.0.0",
   "description": "Truncate text at a word boundary when possible.",
   "type": "module",

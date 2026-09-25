@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/remove-empty-values",
+  "name": "@x-mori/remove-empty-values",
   "version": "1.0.0",
   "description": "Remove null, undefined, and optional empty strings.",
   "type": "module",

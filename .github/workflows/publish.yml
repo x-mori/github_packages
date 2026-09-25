@@ -1,6 +1,13 @@
-name: Publish 52 packages
+name: Publish packages
 on:
   workflow_dispatch:
+    inputs:
+      registry:
+        description: Registry to publish
+        type: choice
+        required: true
+        default: all
+        options: [all, npm, maven, nuget, rubygems]
 permissions:
   contents: read
   packages: write
@@ -14,6 +21,7 @@ jobs:
           node-version: '22'
       - run: node scripts/check-inventory.mjs
   npm:
+    if: inputs.registry == 'all' || inputs.registry == 'npm'
     needs: verify
     runs-on: ubuntu-latest
     steps:
@@ -32,6 +40,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   maven:
+    if: inputs.registry == 'all' || inputs.registry == 'maven'
     needs: verify
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +57,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   nuget:
+    if: inputs.registry == 'all' || inputs.registry == 'nuget'
     needs: verify
     runs-on: ubuntu-latest
     steps:
@@ -56,7 +66,7 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - run: dotnet run --project tests/nuget-smoke/NugetSmoke.csproj -c Release
-      - run: dotnet nuget add source "https://nuget.pkg.github.com/x_mori/index.json" --name github --username "$GITHUB_ACTOR" --password "$GITHUB_TOKEN" --store-password-in-clear-text
+      - run: dotnet nuget add source "https://nuget.pkg.github.com/x-mori/index.json" --name github --username "$GITHUB_ACTOR" --password "$GITHUB_TOKEN" --store-password-in-clear-text
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: for project in packages/nuget/*/*.csproj; do dotnet pack "$project" -c Release -o "$RUNNER_TEMP/nupkg"; done
@@ -64,6 +74,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   rubygems:
+    if: inputs.registry == 'all' || inputs.registry == 'rubygems'
     needs: verify
     runs-on: ubuntu-latest
     steps:

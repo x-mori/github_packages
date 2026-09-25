@@ -1,9 +1,9 @@
-# @x_mori/object-pick
+# @x-mori/object-pick
 
 Copy selected own properties into a new object.
 
 ```js
-import { objectPick } from '@x_mori/object-pick';
+import { objectPick } from '@x-mori/object-pick';
 const publicUser = objectPick({ id: 1, password: 'x' }, ['id']);
 ```
 

@@ -1,9 +1,9 @@
-# @x_mori/unflatten-object
+# @x-mori/unflatten-object
 
 Expand safe dot paths into nested objects.
 
 ```js
-import { unflattenObject } from '@x_mori/unflatten-object';
+import { unflattenObject } from '@x-mori/unflatten-object';
 const nested = unflattenObject({ 'db.host': 'localhost' });
 ```
 

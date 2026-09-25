@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/safe-get",
+  "name": "@x-mori/safe-get",
   "version": "1.0.0",
   "description": "Read a nested own property with a fallback.",
   "type": "module",

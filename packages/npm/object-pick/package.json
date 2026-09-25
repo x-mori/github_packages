@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/object-pick",
+  "name": "@x-mori/object-pick",
   "version": "1.0.0",
   "description": "Copy selected own properties into a new object.",
   "type": "module",

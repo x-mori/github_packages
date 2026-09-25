@@ -1,9 +1,9 @@
-# @x_mori/deep-merge-lite
+# @x-mori/deep-merge-lite
 
 Merge plain objects without mutating inputs.
 
 ```js
-import { deepMergeLite } from '@x_mori/deep-merge-lite';
+import { deepMergeLite } from '@x-mori/deep-merge-lite';
 const merged = deepMergeLite({ db: { host: 'a' } }, { db: { port: 5432 } });
 ```
 

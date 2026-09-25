@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/safe-json-parse",
+  "name": "@x-mori/safe-json-parse",
   "version": "1.0.0",
   "description": "Return JSON data or a parse error without throwing.",
   "type": "module",

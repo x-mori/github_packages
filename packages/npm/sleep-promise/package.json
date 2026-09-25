@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/sleep-promise",
+  "name": "@x-mori/sleep-promise",
   "version": "1.0.0",
   "description": "Wait for a duration with optional abort support.",
   "type": "module",

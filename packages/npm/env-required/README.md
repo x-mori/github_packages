@@ -1,9 +1,9 @@
-# @x_mori/env-required
+# @x-mori/env-required
 
 Require named environment variables with useful errors.
 
 ```js
-import { envRequired } from '@x_mori/env-required';
+import { envRequired } from '@x-mori/env-required';
 const { DATABASE_URL } = envRequired('DATABASE_URL');
 ```
 

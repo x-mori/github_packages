@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/unflatten-object",
+  "name": "@x-mori/unflatten-object",
   "version": "1.0.0",
   "description": "Expand safe dot paths into nested objects.",
   "type": "module",

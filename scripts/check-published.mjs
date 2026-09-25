@@ -25,5 +25,5 @@ for (const [type, wanted] of Object.entries(expected)) {
   console.log(`${type}: ${wanted.length - missing.length}/${wanted.length} expected packages visible through the API`);
   if (missing.length) console.error(`Missing ${type}: ${missing.join(', ')}`);
 }
-if (foundTotal !== 52) process.exitCode = 1;
-else console.log('All 52 expected package names are published.');
+if (foundTotal !== Object.values(expected).flat().length) process.exitCode = 1;
+else console.log('Every expected package name is published.');

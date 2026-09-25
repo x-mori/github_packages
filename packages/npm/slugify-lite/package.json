@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/slugify-lite",
+  "name": "@x-mori/slugify-lite",
   "version": "1.0.0",
   "description": "Convert Unicode text to a compact ASCII URL slug.",
   "type": "module",

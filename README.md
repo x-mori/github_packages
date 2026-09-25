@@ -1,6 +1,6 @@
-# 52 small GitHub Packages
+# Developer utility packages
 
-One repository with 52 separately named developer utilities. The target is 18 Maven artifacts, 18 npm packages, 9 NuGet packages, and 7 Ruby gems. Containers are outside this count.
+One repository with separately published developer utilities. The table records the current counts for four registries. Containers are outside this collection.
 
 | Registry | Packages | Runtime |
 | --- | ---: | --- |
@@ -31,7 +31,7 @@ dotnet run --project tests/nuget-smoke/NugetSmoke.csproj -c Release
 for dir in packages/rubygems/*; do (cd "$dir" && ruby -Ilib test/test.rb); done
 ```
 
-The GitHub Actions `Check packages` workflow runs those checks and builds package archives. The `Publish 52 packages` workflow runs on manual dispatch after CI passes. Its token needs `packages: write`, which the workflow declares. Publication uses the repository's `GITHUB_TOKEN` and each package's own registry endpoint.
+The GitHub Actions `Check packages` workflow runs those checks and builds package archives. The `Publish packages` workflow runs on manual dispatch after CI passes. Its token needs `packages: write`, which the workflow declares. Publication uses the repository's `GITHUB_TOKEN` and each package's own registry endpoint.
 
 ## Use a package
 
@@ -41,13 +41,13 @@ Package coordinates follow these patterns:
 
 ```text
 Maven     io.github.xmori:initials-from-name:1.0.0
-npm       @x_mori/env-required@1.0.0
+npm       @x-mori/env-required@1.0.0
 NuGet     XMori.IsPrivateIp 1.0.0
 RubyGems  x-mori-port-check 1.0.0
 ```
 
 ## Verify publication
 
-`node scripts/check-inventory.mjs` proves the source split. After a publish run, `node scripts/check-published.mjs` queries GitHub's package API and checks all 52 distinct names. The `Verify published packages` workflow runs the same check with a token that has `packages: read`. It reports missing names instead of counting source folders as published packages.
+`node scripts/check-inventory.mjs` proves the source split. After a publish run, `node scripts/check-published.mjs` queries GitHub's package API and checks every distinct package name in the repository. The `Verify published packages` workflow runs the same check with a token that has `packages: read`. It reports missing names instead of counting source folders as published packages.
 
 For later releases, increment the version in each changed package before dispatching the publish workflow again. GitHub Packages counts a new name as a new package; another version of the same name remains one package listing.

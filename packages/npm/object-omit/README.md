@@ -1,9 +1,9 @@
-# @x_mori/object-omit
+# @x-mori/object-omit
 
 Copy an object without selected own properties.
 
 ```js
-import { objectOmit } from '@x_mori/object-omit';
+import { objectOmit } from '@x-mori/object-omit';
 const publicUser = objectOmit({ id: 1, password: 'x' }, ['password']);
 ```
 

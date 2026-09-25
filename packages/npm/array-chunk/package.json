@@ -1,5 +1,5 @@
 {
-  "name": "@x_mori/array-chunk",
+  "name": "@x-mori/array-chunk",
   "version": "1.0.0",
   "description": "Split arrays into fixed-size chunks.",
   "type": "module",
