@@ -20,6 +20,12 @@ One repository with separately published developer utilities. The table records 
 
 Each directory under `packages/` has its own package manifest, source, test, and README. Packages have no runtime dependencies. npm packages include TypeScript declarations. The Maven root `pom.xml` only aggregates modules; it is not a nineteenth package.
 
+## Edit Ruby packages
+
+Install Ruby 3.3 and Bundler, then run `bundle install` at the repository root. The root `Gemfile` includes all seven local gems and Ruby LSP so the editor can index them together. The `.ruby-version` file records the expected Ruby line. This editor bundle does not change the published gems' runtime dependencies.
+
+If Ruby LSP cannot find Ruby on Windows, use **Select Ruby manually** in its notification and choose your Ruby installation's `bin/ruby.exe`. Reopen VS Code after installing Ruby so its extensions receive the updated PATH.
+
 ## Check the repository
 
 ```sh

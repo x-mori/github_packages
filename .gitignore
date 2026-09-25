@@ -10,3 +10,5 @@ tests/nuget-smoke/obj/
 .idea/
 .vscode/
 coverage/
+.ruby-lsp/
+.bundle/
