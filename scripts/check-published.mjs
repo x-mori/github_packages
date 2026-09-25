@@ -4,8 +4,8 @@ import { join } from 'node:path';
 
 const owner = 'x-mori';
 const expected = {
-  npm: readdirSync('packages/npm').map(folder => JSON.parse(readFileSync(join('packages/npm', folder, 'package.json'))).name),
-  maven: readdirSync('packages/maven').map(folder => `io.github.xmori:${folder}`),
+  npm: readdirSync('packages/npm').map(folder => JSON.parse(readFileSync(join('packages/npm', folder, 'package.json'))).name.split('/')[1]),
+  maven: readdirSync('packages/maven').map(folder => `io.github.xmori.${folder}`),
   nuget: readdirSync('packages/nuget').map(folder => `XMori.${folder.split('-').map(part => part[0].toUpperCase() + part.slice(1)).join('')}`),
   rubygems: readdirSync('packages/rubygems'),
 };
@@ -19,7 +19,6 @@ for (const [type, wanted] of Object.entries(expected)) {
     found.push(...response);
     if (response.length < 100) break;
   }
-  console.log(`${type} API names: ${found.map(item => item.name).join(', ')}`);
   const actual = new Set(found.map(item => item.name.toLowerCase()));
   const missing = wanted.filter(name => !actual.has(name.toLowerCase()));
   foundTotal += wanted.length - missing.length;
