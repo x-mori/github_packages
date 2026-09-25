@@ -19,6 +19,7 @@ for (const [type, wanted] of Object.entries(expected)) {
     found.push(...response);
     if (response.length < 100) break;
   }
+  console.log(`${type} API names: ${found.map(item => item.name).join(', ')}`);
   const actual = new Set(found.map(item => item.name.toLowerCase()));
   const missing = wanted.filter(name => !actual.has(name.toLowerCase()));
   foundTotal += wanted.length - missing.length;
