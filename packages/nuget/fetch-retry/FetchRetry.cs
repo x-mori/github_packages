@@ -1,6 +1,15 @@
 using System.Net;
 namespace XMori.FetchRetry;
+/// <summary>Retries idempotent HTTP GET requests after transient failures.</summary>
 public static class RetryingFetch {
+    /// <summary>Retries a GET after HTTP 429, HTTP 5xx, or a network request exception.</summary>
+    /// <param name="client">HTTP client used for every attempt.</param>
+    /// <param name="uri">Absolute request URI.</param>
+    /// <param name="attempts">Maximum number of requests, including the first.</param>
+    /// <param name="delay">Initial wait between attempts; later waits double up to 30 seconds.</param>
+    /// <param name="cancellationToken">Token that cancels the request or backoff wait.</param>
+    /// <returns>The final response, including non-success responses; the caller must dispose it.</returns>
+    /// <remarks>Failed responses before the final attempt are disposed. This API only sends GET requests.</remarks>
     public static async Task<HttpResponseMessage> GetAsync(HttpClient client, Uri uri, int attempts = 3, TimeSpan? delay = null, CancellationToken cancellationToken = default) {
         ArgumentNullException.ThrowIfNull(client); ArgumentNullException.ThrowIfNull(uri);
         if (attempts < 1) throw new ArgumentOutOfRangeException(nameof(attempts));

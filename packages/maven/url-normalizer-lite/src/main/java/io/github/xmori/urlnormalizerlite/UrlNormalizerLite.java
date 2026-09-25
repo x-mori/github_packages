@@ -1,7 +1,20 @@
 package io.github.xmori.urlnormalizerlite;
 
+/**
+ * Normalize HTTP URLs and default ports.
+ */
 public final class UrlNormalizerLite {
     private UrlNormalizerLite() {}
+    /**
+     * Normalize an absolute HTTP or HTTPS URL without losing raw escapes.
+     *
+     * The scheme and host become lowercase, dot path segments are normalized,
+     * default ports are removed, and an empty path becomes a slash. URLs with
+     * embedded credentials are rejected.
+     * @param input URL to normalize
+     * @return normalized URL text
+     * @throws IllegalArgumentException for malformed or unsupported URLs
+     */
     public static String normalize(String input) {
         try {
             java.net.URI uri = new java.net.URI(input).normalize();

@@ -1,7 +1,12 @@
 require 'uri'
 module XMori
+  # Extracts an owner and repository name from a GitHub remote.
   module GitRepoInfo
     module_function
+    # Parses a GitHub HTTPS, SSH, git, or scp-style remote URL.
+    # @param remote [String] GitHub remote, with an optional .git suffix.
+    # @return [Hash{Symbol => String}] owner and repo keys.
+    # @raise [ArgumentError] if the remote is invalid or is not on github.com.
     def parse(remote)
       raise ArgumentError, 'remote is required' unless remote.is_a?(String)
       path = if remote.match?(/\Agit@github\.com:/i)

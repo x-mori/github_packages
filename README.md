@@ -40,10 +40,10 @@ GitHub Packages requires authentication to install packages, including public pa
 Package coordinates follow these patterns:
 
 ```text
-Maven     io.github.xmori:initials-from-name:1.0.0
-npm       @x-mori/env-required@1.0.0
-NuGet     XMori.IsPrivateIp 1.0.0
-RubyGems  x-mori-port-check 1.0.0
+Maven     io.github.xmori:initials-from-name:1.0.1
+npm       @x-mori/env-required@1.0.1
+NuGet     XMori.IsPrivateIp 1.0.1
+RubyGems  x-mori-port-check 1.0.1
 ```
 
 ## Verify publication

@@ -1,7 +1,19 @@
 package io.github.xmori.striptrackingparams;
 
+/**
+ * Remove common tracking query parameters from a URL.
+ */
 public final class StripTrackingParams {
     private StripTrackingParams() {}
+    /**
+     * Remove common tracking parameters from an absolute URL.
+     *
+     * Keys beginning with utm_ and the keys fbclid, gclid, and msclkid are removed
+     * case-insensitively. Other raw query values and the fragment are preserved.
+     * @param input absolute URL to clean
+     * @return URL with tracked parameters removed
+     * @throws IllegalArgumentException for malformed or relative URLs
+     */
     public static String strip(String input) {
     try {
         java.net.URI uri = new java.net.URI(input);

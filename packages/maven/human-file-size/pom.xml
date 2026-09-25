@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion><groupId>io.github.xmori</groupId><artifactId>human-file-size</artifactId><version>1.0.0</version>
-  <name>human-file-size</name><description>Format byte counts in SI or binary units.</description><url>https://github.com/x-mori/github_packages</url>
+  <modelVersion>4.0.0</modelVersion><groupId>io.github.xmori</groupId><artifactId>human-file-size</artifactId><version>1.0.1</version>
+  <name>human-file-size</name><description>Format byte counts in SI or binary units.</description><url>https://github.com/x-mori/minimori-packages</url>
   <licenses><license><name>MIT License</name><url>https://opensource.org/licenses/MIT</url></license></licenses>
-  <scm><url>https://github.com/x-mori/github_packages</url><connection>scm:git:https://github.com/x-mori/github_packages.git</connection></scm>
+  <scm><url>https://github.com/x-mori/minimori-packages</url><connection>scm:git:https://github.com/x-mori/minimori-packages.git</connection></scm>
   <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
   <dependencies><dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.4</version><scope>test</scope></dependency></dependencies>
-  <build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version></plugin><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.2</version></plugin></plugins></build>
-  <distributionManagement><repository><id>github</id><url>https://maven.pkg.github.com/x-mori/github_packages</url></repository></distributionManagement>
+  <build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version></plugin><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.2</version></plugin><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-source-plugin</artifactId><version>3.4.0</version><executions><execution><id>attach-sources</id><goals><goal>jar-no-fork</goal></goals></execution></executions></plugin><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId><version>3.12.0</version><executions><execution><id>attach-javadocs</id><goals><goal>jar</goal></goals></execution></executions></plugin></plugins></build>
+  <distributionManagement><repository><id>github</id><url>https://maven.pkg.github.com/x-mori/minimori-packages</url></repository></distributionManagement>
 </project>

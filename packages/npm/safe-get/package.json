@@ -1,6 +1,6 @@
 {
   "name": "@x-mori/safe-get",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read a nested own property with a fallback.",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-mori/github_packages.git",
+    "url": "git+https://github.com/x-mori/minimori-packages.git",
     "directory": "packages/npm/safe-get"
   },
   "license": "MIT",

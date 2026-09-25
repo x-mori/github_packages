@@ -1,7 +1,20 @@
 package io.github.xmori.joinurl;
 
+/**
+ * Join URL path segments without duplicate separators.
+ */
 public final class JoinUrl {
     private JoinUrl() {}
+    /**
+     * Append path segments to an absolute base URL.
+     *
+     * Duplicate boundary slashes are removed while the base query and fragment are
+     * preserved. Segment text is expected to be URL-safe path content.
+     * @param base absolute URL without credentials
+     * @param segments path segments to append
+     * @return URL with joined path
+     * @throws IllegalArgumentException for missing or invalid input
+     */
     public static String join(String base, String... segments) {
         if (base == null || base.isBlank()) throw new IllegalArgumentException("base URL is required");
         java.net.URI uri = java.net.URI.create(base);

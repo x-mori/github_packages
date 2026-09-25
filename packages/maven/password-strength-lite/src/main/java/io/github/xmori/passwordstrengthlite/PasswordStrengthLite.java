@@ -1,8 +1,23 @@
 package io.github.xmori.passwordstrengthlite;
 
+/**
+ * Give basic password quality feedback.
+ */
 public final class PasswordStrengthLite {
     private PasswordStrengthLite() {}
+        /**
+     * A basic score and suggestions for improving a password.
+     */
     public record Result(int score, java.util.List<String> advice) {}
+/**
+ * Give basic feedback about password length and character variety.
+ *
+ * The score is a count from zero to five of simple checks. It is not an entropy
+ * estimate or a substitute for breach checks and secure password storage.
+ * @param password text to assess
+ * @return a score and immutable advice list
+ * @throws IllegalArgumentException if password is null
+ */
 public static Result analyze(String password) {
     if (password == null) throw new IllegalArgumentException("password is required");
     java.util.List<String> advice = new java.util.ArrayList<>();

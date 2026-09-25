@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
-    <PackageId>XMori.AsyncQueueLite</PackageId><Version>1.0.0</Version>
+    <TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>XMori.AsyncQueueLite</PackageId><Version>1.0.1</Version>
     <Description>Limit concurrent async operations.</Description><Authors>x-mori</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression><PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/x-mori/github_packages</RepositoryUrl>
+    <RepositoryUrl>https://github.com/x-mori/minimori-packages</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup><None Include="README.md" Pack="true" PackagePath="/" /></ItemGroup>
 </Project>

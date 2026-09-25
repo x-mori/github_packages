@@ -1,6 +1,6 @@
 {
   "name": "@x-mori/timeout-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set a deadline for a promise result.",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-mori/github_packages.git",
+    "url": "git+https://github.com/x-mori/minimori-packages.git",
     "directory": "packages/npm/timeout-promise"
   },
   "license": "MIT",

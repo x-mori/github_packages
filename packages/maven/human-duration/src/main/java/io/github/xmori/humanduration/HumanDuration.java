@@ -1,7 +1,19 @@
 package io.github.xmori.humanduration;
 
+/**
+ * Format milliseconds as days, hours, minutes, and seconds.
+ */
 public final class HumanDuration {
     private HumanDuration() {}
+    /**
+     * Format milliseconds as days, hours, minutes, and seconds.
+     *
+     * Zero-valued leading units are omitted. Fractional seconds are discarded;
+     * durations shorter than one second display as 0s.
+     * @param milliseconds nonnegative duration in milliseconds
+     * @return a compact duration string such as 1h 2m
+     * @throws IllegalArgumentException if milliseconds is negative
+     */
     public static String format(long milliseconds) {
     if (milliseconds < 0) throw new IllegalArgumentException("duration must be nonnegative");
     long seconds = milliseconds / 1000;

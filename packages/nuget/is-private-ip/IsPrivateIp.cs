@@ -1,6 +1,11 @@
 using System.Net;
 namespace XMori.IsPrivateIp;
+/// <summary>Classifies IP addresses as local or public.</summary>
 public static class IpClassifier {
+    /// <summary>Reports whether an address is loopback, private, link-local, or carrier-grade NAT.</summary>
+    /// <param name="input">IPv4 or IPv6 text. Invalid text returns false.</param>
+    /// <returns>True for a recognized local or internal address.</returns>
+    /// <remarks>IPv4-mapped IPv6 addresses are checked as IPv4. This classification is not a complete SSRF defense because DNS and routing can change.</remarks>
     public static bool IsPrivate(string input) {
         if (!IPAddress.TryParse(input, out var address)) return false;
         if (address.IsIPv4MappedToIPv6) address = address.MapToIPv4();

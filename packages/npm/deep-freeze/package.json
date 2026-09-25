@@ -1,6 +1,6 @@
 {
   "name": "@x-mori/deep-freeze",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Freeze nested arrays and plain objects, including cycles.",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-mori/github_packages.git",
+    "url": "git+https://github.com/x-mori/minimori-packages.git",
     "directory": "packages/npm/deep-freeze"
   },
   "license": "MIT",
