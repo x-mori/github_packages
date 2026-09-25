@@ -1,0 +1,21 @@
+name: Verify published packages
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Publish 52 packages]
+    types: [completed]
+permissions:
+  contents: read
+  packages: read
+jobs:
+  count:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-inventory.mjs
+      - run: node scripts/check-published.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

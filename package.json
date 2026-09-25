@@ -1,0 +1,10 @@
+{
+  "name": "x-mori-github-packages",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.5.1",
+  "scripts": {
+    "test:npm": "pnpm --recursive test",
+    "check:inventory": "node scripts/check-inventory.mjs"
+  }
+}

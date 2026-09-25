@@ -1,0 +1,45 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/npm/array-chunk: {}
+
+  packages/npm/array-unique-by: {}
+
+  packages/npm/deep-freeze: {}
+
+  packages/npm/deep-merge-lite: {}
+
+  packages/npm/env-required: {}
+
+  packages/npm/flatten-object: {}
+
+  packages/npm/group-by-key: {}
+
+  packages/npm/object-omit: {}
+
+  packages/npm/object-pick: {}
+
+  packages/npm/remove-empty-values: {}
+
+  packages/npm/retry-async: {}
+
+  packages/npm/safe-get: {}
+
+  packages/npm/safe-json-parse: {}
+
+  packages/npm/sleep-promise: {}
+
+  packages/npm/slugify-lite: {}
+
+  packages/npm/string-truncate-smart: {}
+
+  packages/npm/timeout-promise: {}
+
+  packages/npm/unflatten-object: {}

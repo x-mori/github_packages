@@ -1,0 +1,10 @@
+node_modules/
+target/
+bin/
+obj/
+*.gem
+*.nupkg
+*.snupkg
+.idea/
+.vscode/
+coverage/

@@ -1,0 +1,17 @@
+package io.github.xmori.passwordstrengthlite;
+
+public final class PasswordStrengthLite {
+    private PasswordStrengthLite() {}
+    public record Result(int score, java.util.List<String> advice) {}
+public static Result analyze(String password) {
+    if (password == null) throw new IllegalArgumentException("password is required");
+    java.util.List<String> advice = new java.util.ArrayList<>();
+    int score = 0;
+    if (password.length() >= 12) score++; else advice.add("Use at least 12 characters");
+    if (password.length() >= 20) score++; else advice.add("A longer passphrase is stronger");
+    if (password.matches(".*[a-z].*") && password.matches(".*[A-Z].*")) score++; else advice.add("Mix letter case");
+    if (password.matches(".*[0-9].*")) score++; else advice.add("Add a number");
+    if (password.matches(".*[^\\p{Alnum}].*")) score++; else advice.add("Add a symbol");
+    return new Result(score, java.util.List.copyOf(advice));
+}
+}

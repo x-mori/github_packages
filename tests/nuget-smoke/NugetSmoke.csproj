@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../packages/nuget/is-private-ip/IsPrivateIp.csproj" />
+    <ProjectReference Include="../../packages/nuget/fetch-timeout/FetchTimeout.csproj" />
+    <ProjectReference Include="../../packages/nuget/fetch-retry/FetchRetry.csproj" />
+    <ProjectReference Include="../../packages/nuget/fetch-json-safe/FetchJsonSafe.csproj" />
+    <ProjectReference Include="../../packages/nuget/api-error-normalizer/ApiErrorNormalizer.csproj" />
+    <ProjectReference Include="../../packages/nuget/rate-limit-memory/RateLimitMemory.csproj" />
+    <ProjectReference Include="../../packages/nuget/debounce-promise/DebouncePromise.csproj" />
+    <ProjectReference Include="../../packages/nuget/async-queue-lite/AsyncQueueLite.csproj" />
+    <ProjectReference Include="../../packages/nuget/memoize-async/MemoizeAsync.csproj" />
+  </ItemGroup>
+</Project>

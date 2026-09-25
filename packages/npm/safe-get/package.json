@@ -1,0 +1,31 @@
+{
+  "name": "@x_mori/safe-get",
+  "version": "1.0.0",
+  "description": "Read a nested own property with a fallback.",
+  "type": "module",
+  "exports": {
+    "types": "./src/index.d.ts",
+    "default": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-mori/github_packages.git",
+    "directory": "packages/npm/safe-get"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "types": "./src/index.d.ts"
+}
